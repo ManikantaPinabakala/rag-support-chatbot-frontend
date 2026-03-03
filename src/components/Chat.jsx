@@ -1,5 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 
+const API_URL = import.meta.env.VITE_BASE_API_URL || "http://localhost:5000/api";
+
 const SUGGESTIONS = [
   "How long does shipping take?",
   "How do I request a refund?",
@@ -40,7 +42,7 @@ export default function Chat() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/chat", {
+      const response = await fetch(`${API_URL}/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
