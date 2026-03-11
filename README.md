@@ -221,7 +221,7 @@ http://localhost:5000
 ### 3. Frontend Setup
 
 ```bash
-cd frontend
+cd rag-support-chatbot-frontend
 npm install
 npm run dev
 ```
